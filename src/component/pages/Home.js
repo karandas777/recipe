@@ -6,8 +6,22 @@ import Jumbo from '../uiElements/Jumbo';
 
 class Home extends Component {
 
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+       query:"chicken",
+    }
+  }
+  
   componentDidMount(){
-    this.props.findRecipe('chicken');
+    this.props.findRecipe(this.state.query);
+  }
+
+  funSetQuery = (data) => {
+      this.setState({query:data},()=>{
+        this.props.findRecipe(this.state.query);
+      });
   }
 
   render() {
@@ -16,11 +30,13 @@ class Home extends Component {
       <div className="container-fluid py-2 px-0">
         <div className="container px-custom min-height">
 
-          <Jumbo/>
+          <Jumbo funSetQuery={this.funSetQuery}/>
 
+          <div className="text-center">
           {
-              this.props.myrecipes.length === 0 ? (<div className="text-center">Loading</div>) : null
+              this.props.myrecipes.length === 0 ? (<div className="spinner-border text-success"></div>) : null
           }
+          </div>
 
           <div className="holder m-0 py-3 px-0">
             {

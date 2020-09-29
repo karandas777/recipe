@@ -21,10 +21,6 @@ body {
   background: linear-gradient(to right, #445829, #fff12b);
 }
 
-.bg-trans{
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
 /* custom padding */
 
 .px-custom{
@@ -36,9 +32,31 @@ body {
   min-height: 100vh;
 }
 
+/* card layout */
+
 .holder{
   column-count: 3;
   column-gap: 15px;
+}
+
+.bg-trans{
+  background-color: rgba(0, 0, 0, 0.7);
+  border-left:10px solid rgba(207, 0, 0, 0.151);
+}
+
+.badgex{
+  font-size: 10px;
+  display: inline-block;
+}
+
+/* logo fonts */
+
+.logo-img{
+  margin-right: 10px;
+}
+
+.logo-txt{
+  font-size: 56px;
 }
 
 @media screen and (max-width:600px){
@@ -48,6 +66,16 @@ body {
   }
   .holder{
     column-count: 2;
-    column-gap: 7px;
   } 
+  .logo-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .logo-txt{
+    font-size: 30px;
+  }
+  .logo-sub{
+    font-size: 12px;
+  }
 }

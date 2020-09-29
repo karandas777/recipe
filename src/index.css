@@ -41,7 +41,12 @@ body {
 
 .bg-trans{
   background-color: rgba(0, 0, 0, 0.7);
-  border-left:10px solid rgba(207, 0, 0, 0.151);
+  border-left:10px solid rgb(219, 45, 45);
+}
+
+.bg-trans-light{
+  background-color: rgba(255, 255, 255, 0.76);
+  color:black;
 }
 
 .badgex{

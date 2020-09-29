@@ -15,13 +15,13 @@ export default class RecipeCard extends Component {
             <div className="small">{source}</div>
             <div className="mt-3 text-left">
                 {
-                    dietLabels.map((label,i)=>(<span className="badgex bg-primary px-1 rounded mr-2" key={i}>{label}</span>))
+                    dietLabels.map((label,i)=>(<span className="badgex bg-trans-light px-1 rounded mr-2" key={i}>{label}</span>))
                 }
                 {
-                    healthLabels.map((label,i)=>(<span className="badgex bg-success px-1 rounded mr-2" key={i}>{label}</span>))
+                    healthLabels.map((label,i)=>(<span className="badgex bg-trans-light px-1 rounded mr-2" key={i}>{label}</span>))
                 }
                 {
-                    cautions.map((label,i)=>(<span className="badgex bg-danger px-1 rounded mr-2" key={i}>{label}</span>))
+                    cautions.map((label,i)=>(<span className="badgex bg-trans-light px-1 rounded mr-2" key={i}>{label}</span>))
                 }
             </div>
           </div>

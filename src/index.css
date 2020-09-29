@@ -1,0 +1,53 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat&display=swap');
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  user-select: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.sty-font{
+  font-family: 'Courgette', cursive;
+}
+
+/* color schemes */
+
+.bg-grad{
+  background: linear-gradient(to right, #445829, #fff12b);
+}
+
+.bg-trans{
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* custom padding */
+
+.px-custom{
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.min-height{
+  min-height: 100vh;
+}
+
+.holder{
+  column-count: 3;
+  column-gap: 15px;
+}
+
+@media screen and (max-width:600px){
+  .px-custom{
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  .holder{
+    column-count: 2;
+    column-gap: 7px;
+  } 
+}

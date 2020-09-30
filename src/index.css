@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rancho&family=Roboto&display=swap');
 
 html{
   scroll-behavior: smooth;
@@ -8,17 +8,29 @@ html{
 body {
   margin: 0;
   user-select: none;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .sty-font{
-  font-family: 'Courgette', cursive;
+  font-family: 'Rancho', cursive;
 }
 
 /* color schemes */
 
-.bg-grad{
-  background: linear-gradient(to right, #445829, #fff12b);
+/* form */
+
+.bg-form{
+  background-color: #ece9e6;
+  color: black;
+  transition: 0.3s;
+  border-radius: 20px;
+  width: 50%;
+}
+
+.bg-form:focus{
+  background-color: #ece9e6;
+  border-radius:5px;
+  width: 70%;
 }
 
 /* custom padding */
@@ -35,22 +47,31 @@ body {
 /* card layout */
 
 .holder{
-  column-count: 3;
+  column-count: 4;
   column-gap: 15px;
 }
 
 .bg-trans{
   background-color: rgba(0, 0, 0, 0.7);
-  border-left:10px solid rgb(219, 45, 45);
+  transition: 0.3s;
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.7);
 }
+
+/* .bg-trans:hover{
+  box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.7);
+} */
 
 .bg-trans-light{
   background-color: rgba(255, 255, 255, 0.76);
   color:black;
 }
 
+.card-head{
+  font-size: 30px;
+}
+
 .badgex{
-  font-size: 10px;
+  font-size: 12px;
   display: inline-block;
 }
 
@@ -61,7 +82,10 @@ body {
 }
 
 .logo-txt{
-  font-size: 56px;
+  font-size: 60px;
+}
+.logo-sub{
+  font-size: 20px;
 }
 
 @media screen and (max-width:600px){
@@ -78,9 +102,17 @@ body {
     margin-right: auto;
   }
   .logo-txt{
-    font-size: 30px;
+    font-size: 36px;
   }
   .logo-sub{
-    font-size: 12px;
+    font-size: 16px;
+  }
+
+  .card-head{
+    font-size: 20px;
+  }
+
+  .badgex{
+    font-size: 10px;
   }
 }

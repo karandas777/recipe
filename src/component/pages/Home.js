@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {findRecipe} from '../../redux/action/recipeAction';
 import RecipeCard from "../uiElements/RecipeCard";
 import Jumbo from '../uiElements/Jumbo';
+import SearchForm from "../uiElements/SearchForm";
 
 class Home extends Component {
 
@@ -11,6 +12,7 @@ class Home extends Component {
   
     this.state = {
        query:"chicken",
+       loading:true,
     }
   }
   
@@ -30,17 +32,20 @@ class Home extends Component {
       <div className="container-fluid py-2 px-0">
         <div className="container px-custom min-height">
 
-          <Jumbo funSetQuery={this.funSetQuery}/>
+          <Jumbo/>
 
-          <div className="text-center">
+          <SearchForm funSetQuery={this.funSetQuery}/>
+
+          <div className="text-center my-4">
           {
-              this.props.myrecipes.length === 0 ? (<div className="spinner-border text-success"></div>) : null
+              this.props.loading ? (<div className="spinner-border text-success"></div>) : 
+              (<div className="text-muted">{`Some popular ${this.state.query} recipes.`}</div>)
           }
           </div>
 
           <div className="holder m-0 py-3 px-0">
             {
-              this.props.myrecipes && this.props.myrecipes.map((item,i)=>(
+              !this.props.loading && this.props.myrecipes.map((item,i)=>(
                 <RecipeCard key={i} recipe={item.recipe} />
               ))
             }
@@ -53,6 +58,7 @@ class Home extends Component {
 
 const mapStateToProps = (state)=>({
   myrecipes:state.recipe.myrecipes,
+  loading:state.load.loading,
 })
 
 export default connect(mapStateToProps,{findRecipe})(Home);

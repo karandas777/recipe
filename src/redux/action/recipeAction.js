@@ -1,7 +1,10 @@
 import Axios from 'axios';
-import {APIURL, FIND_RECIPE} from './types';
+import {APIURL, FIND_RECIPE,START_LOAD,STOP_LOAD} from './types';
 
 export const findRecipe = (query) => dispatch => {
+    dispatch({
+        type:START_LOAD,
+    })
     Axios.get(APIURL,{
         params:{
             q:query,
@@ -15,6 +18,9 @@ export const findRecipe = (query) => dispatch => {
         dispatch({
             type:FIND_RECIPE,
             payload:res.data.hits,
+        })
+        dispatch({
+            type:STOP_LOAD,
         })
     })
     .catch((err)=>{console.log(err)})

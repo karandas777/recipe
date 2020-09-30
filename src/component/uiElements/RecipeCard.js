@@ -9,10 +9,10 @@ export default class RecipeCard extends Component {
     };
     return (
       <div className="d-inline-block w-100 mb-3 text-light">
-        <div style={styling} className="rounded-lg p-0">
-          <div className="bg-trans rounded-lg m-0 p-3">
-            <div className="h5 sty-font mt-3">{label}</div>
-            <div className="small">{source}</div>
+        <div style={styling} className="rounded p-0">
+          <div className="bg-trans rounded m-0 p-3">
+            <div className="card-head sty-font mt-1">{label}</div>
+            <div className="badgex">{source}</div>
             <div className="mt-3 text-left">
                 {
                     dietLabels.map((label,i)=>(<span className="badgex bg-trans-light px-1 rounded mr-2" key={i}>{label}</span>))

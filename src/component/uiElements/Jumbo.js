@@ -14,7 +14,7 @@ export default class Jumbo extends Component {
               height="80"
               width="80"
             />
-            <span className="text-success">Recipe</span> Master
+            <span className="text-danger">Recipe</span> Master
           </h1>
           <div className="logo-sub sty-font text-muted text-center mb-4">
             Find your favourite recipes & know more about them !

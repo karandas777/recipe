@@ -36,8 +36,8 @@ body {
 /* custom padding */
 
 .px-custom{
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 100px;
+  padding-left: 100px;
 }
 
 .min-height{
@@ -47,19 +47,23 @@ body {
 /* card layout */
 
 .holder{
-  column-count: 4;
+  column-count: 3;
   column-gap: 15px;
 }
 
-.bg-trans{
-  background-color: rgba(0, 0, 0, 0.7);
-  transition: 0.3s;
-  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.7);
+.radius{
+  border-radius: 15px;
 }
 
-/* .bg-trans:hover{
-  box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.7);
-} */
+.bg-trans{
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: 0.3s;
+  border-left: 10px solid rgba(255, 0, 0, 0);
+}
+
+.bg-trans:hover{
+  border-left: 10px solid rgb(255, 0, 0);
+}
 
 .bg-trans-light{
   background-color: rgba(255, 255, 255, 0.76);
@@ -67,7 +71,7 @@ body {
 }
 
 .card-head{
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .badgex{

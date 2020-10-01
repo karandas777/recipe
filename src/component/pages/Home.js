@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {connect} from 'react-redux'; 
-import {findRecipe} from '../../redux/action/recipeAction';
+import {findRecipe,recipeDetails} from '../../redux/action/recipeAction';
 import RecipeCard from "../uiElements/RecipeCard";
 import Jumbo from '../uiElements/Jumbo';
 import SearchForm from "../uiElements/SearchForm";
@@ -26,6 +26,11 @@ class Home extends Component {
       });
   }
 
+  getRecipeDetails=(id)=>{
+        this.props.recipeDetails(id);
+        this.props.history.push('/details');
+  }
+
   render() {
     console.log(this.props.myrecipes);
     return (
@@ -38,7 +43,7 @@ class Home extends Component {
 
           <div className="text-center my-4">
           {
-              this.props.loading ? (<div className="spinner-border text-success"></div>) : 
+              this.props.loading ? (<div className="spinner-border text-danger"></div>) : 
               (<div className="text-muted">{`Some popular ${this.state.query} recipes.`}</div>)
           }
           </div>
@@ -46,7 +51,7 @@ class Home extends Component {
           <div className="holder m-0 py-3 px-0">
             {
               !this.props.loading && this.props.myrecipes.map((item,i)=>(
-                <RecipeCard key={i} recipe={item.recipe} />
+                <RecipeCard key={i} recipe={item.recipe} getRecipeDetails={this.getRecipeDetails} />
               ))
             }
           </div>
@@ -61,4 +66,4 @@ const mapStateToProps = (state)=>({
   loading:state.load.loading,
 })
 
-export default connect(mapStateToProps,{findRecipe})(Home);
+export default connect(mapStateToProps,{findRecipe,recipeDetails})(Home);

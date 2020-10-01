@@ -3,14 +3,19 @@ import store from './store';
 import {Provider} from 'react-redux';
 import Footer from './component/common/Footer';
 import Home from './component/pages/Home';
+import { BrowserRouter as Router, Route,Switch } from 'react-router-dom';
+import Details from './component/pages/Details';
 
 function App() {
   return (
     <Provider store={store}>
-      <div className="m-0 p-0 bg-white">
-        <Home/>
+      <Router>
+        <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/details/" component={Details} />
+        </Switch>
         <Footer/>
-      </div>
+      </Router>
     </Provider>
   );
 }

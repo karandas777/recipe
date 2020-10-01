@@ -9,7 +9,7 @@ export default class Jumbo extends Component {
           <h1 className="logo-txt sty-font text-center">
             <span className="text-danger">Recipe</span> Master
           </h1>
-          <div className="logo-sub sty-font text-muted text-center mb-4">
+          <div className="logo-sub text-muted text-center mb-4">
             Find your favourite recipes & know more about them !
           </div>
         </div>

@@ -11,7 +11,7 @@ class Home extends Component {
     super(props)
   
     this.state = {
-       query:"chicken",
+       query:"pasta",
        loading:true,
     }
   }

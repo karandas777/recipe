@@ -1,7 +1,6 @@
 
 export const APIURL = "https://api.edamam.com/search";
 export const FIND_RECIPE = "FIND_RECIPE";
-export const RECIPE_DETAILS = "RECIPE_DETAILS";
 
 // loader
 

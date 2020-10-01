@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Niconne&family=Roboto&display=swap');
 
 html{
   scroll-behavior: smooth;
@@ -12,7 +12,7 @@ body {
 }
 
 .sty-font{
-  font-family: 'Great Vibes';
+  font-family: 'Niconne';
 }
 
 /* color schemes */
@@ -36,8 +36,8 @@ body {
 /* custom padding */
 
 .px-custom{
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 100px;
+  padding-left: 100px;
 }
 
 .min-height{
@@ -47,7 +47,7 @@ body {
 /* card layout */
 
 .holder{
-  column-count: 3;
+  column-count: 2;
   column-gap: 15px;
 }
 
@@ -78,7 +78,7 @@ body {
   font-size: 54px;
 }
 .logo-sub{
-  font-size: 15px;
+  font-size: 18px;
 }
 
 @media screen and (max-width:600px){
@@ -102,7 +102,7 @@ body {
   }
 
   .card-head{
-    font-size: 24px;
+    font-size: 30px;
   }
 
   .badgex{

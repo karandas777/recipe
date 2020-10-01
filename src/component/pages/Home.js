@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {connect} from 'react-redux'; 
-import {findRecipe,recipeDetails} from '../../redux/action/recipeAction';
+import {findRecipe} from '../../redux/action/recipeAction';
 import RecipeCard from "../uiElements/RecipeCard";
 import Jumbo from '../uiElements/Jumbo';
 import SearchForm from "../uiElements/SearchForm";
@@ -27,13 +27,7 @@ class Home extends Component {
       });
   }
 
-  getRecipeDetails=(id)=>{
-        this.props.recipeDetails(id);
-        this.props.history.push('/details');
-  }
-
   render() {
-    console.log(this.props.myrecipes);
     return (
       <div className="container-fluid py-2 px-0">
         <div className="container px-custom min-height">
@@ -52,7 +46,7 @@ class Home extends Component {
           <div className="holder m-0 pt-3 pb-5 px-0">
             {
               !this.props.loading && this.props.myrecipes.map((item,i)=>(
-                <RecipeCard key={i} recipe={item.recipe} getRecipeDetails={this.getRecipeDetails} />
+                <RecipeCard key={i} recipe={item.recipe}/>
               ))
             }
           </div>
@@ -67,4 +61,4 @@ const mapStateToProps = (state)=>({
   loading:state.load.loading,
 })
 
-export default connect(mapStateToProps,{findRecipe,recipeDetails})(Home);
+export default connect(mapStateToProps,{findRecipe})(Home);

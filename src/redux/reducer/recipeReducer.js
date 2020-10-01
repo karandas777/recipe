@@ -1,8 +1,7 @@
-import {FIND_RECIPE,RECIPE_DETAILS} from '../action/types';
+import {FIND_RECIPE} from '../action/types';
 
 const initialState = {
     myrecipes:[],
-    recipeDetails:{},
 }
 
 const recipeReducer = (state = initialState,action)=>{
@@ -11,11 +10,6 @@ const recipeReducer = (state = initialState,action)=>{
             return{
                 ...state,
                 myrecipes:action.payload,
-            }
-        case RECIPE_DETAILS :
-            return{
-                ...state,
-                recipeDetails:action.payload,
             }
         default :
             return state

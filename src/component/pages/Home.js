@@ -17,6 +17,7 @@ class Home extends Component {
   }
   
   componentDidMount(){
+    window.scrollTo(0,0);
     this.props.findRecipe(this.state.query);
   }
 
@@ -41,14 +42,14 @@ class Home extends Component {
 
           <SearchForm funSetQuery={this.funSetQuery}/>
 
-          <div className="text-center my-4">
+          <div className="text-center mt-5 mb-3">
           {
               this.props.loading ? (<div className="spinner-border text-danger"></div>) : 
               (<div className="text-muted">{`Some popular ${this.state.query} recipes.`}</div>)
           }
           </div>
 
-          <div className="holder m-0 py-3 px-0">
+          <div className="holder m-0 pt-3 pb-5 px-0">
             {
               !this.props.loading && this.props.myrecipes.map((item,i)=>(
                 <RecipeCard key={i} recipe={item.recipe} getRecipeDetails={this.getRecipeDetails} />

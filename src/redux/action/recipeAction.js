@@ -11,7 +11,7 @@ export const findRecipe = (query) => dispatch => {
             app_id:"2381de63",
             app_key:"4a9cc5a4fe8d6ae0a61a2b3857997b96",
             form:0,
-            to:21,
+            to:15,
         }
     })
     .then((res)=>{
